@@ -7,6 +7,9 @@
             name="contact"
             type="com.andro4everyone.bindingdata.Contact" />
 
+        <variable
+            name="handler"
+            type="com.andro4everyone.bindingdata.EventHandler" />
     </data>
 
 <LinearLayout
@@ -36,6 +39,13 @@
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"/>
 
+    <Button
+        android:id="@+id/btnClickId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/click"
+        android:onClick="@{() -> handler.btnClicked()}"/>
 
 </LinearLayout>
 

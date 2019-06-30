@@ -13,5 +13,7 @@ class MainActivity : AppCompatActivity() {
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.contact = Contact("Delowar Hossain", "zindadelu@gmail.com")
+
+        binding.handler = EventHandler(this)
     }
 }

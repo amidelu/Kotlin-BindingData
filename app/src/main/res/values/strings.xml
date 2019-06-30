@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Binding Data</string>
+    <string name="click">Click Me!</string>
 </resources>
