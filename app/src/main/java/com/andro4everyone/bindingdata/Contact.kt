@@ -1,7 +1,10 @@
 package com.andro4everyone.bindingdata
 
+import android.widget.ImageView
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
+import androidx.databinding.BindingAdapter
+import com.bumptech.glide.Glide
 
 class Contact (_name: String, _email: String): BaseObservable() { //extends BaseObservables for observing data changes
     //getter and setter code for our contact
@@ -18,5 +21,12 @@ class Contact (_name: String, _email: String): BaseObservable() { //extends Base
             field = value
             notifyPropertyChanged(BR.email)
         }
-
+    companion object {
+        @JvmStatic @BindingAdapter ("profileImage")
+        fun loadImage(view: ImageView, imageUrl: String) {
+            Glide.with(view.context)
+                .load(imageUrl)
+                .into(view)
+        }
+    }
 }

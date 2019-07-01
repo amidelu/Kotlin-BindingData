@@ -12,8 +12,10 @@ class MainActivity : AppCompatActivity() {
 
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        binding.contact = Contact("Delowar Hossain", "zindadelu@gmail.com")
+        binding.contact = Contact("Captain Marvel", "xyz@gmail.com")
 
         binding.handler = EventHandler(this)
+
+        binding.imageUrl = "https://i.redd.it/lhw4vp5yoy121.jpg"
     }
 }
